@@ -1,0 +1,21 @@
+﻿@model WebApplicationMVCSample.Models.Calculation.IndexModel
+
+@{
+    ViewBag.Title = "四則演算";
+}
+
+@using(Html.BeginForm("Calculate","Calculation",FormMethod.Get)){
+    @Html.TextBoxFor(model => model.Left)
+    @Html.DropDownListFor(model=>model.OperatorType,Model.OperatorTypeList)
+    @Html.TextBoxFor(model => model.Right)
+    <button type = "submit">計算</button>
+}
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
